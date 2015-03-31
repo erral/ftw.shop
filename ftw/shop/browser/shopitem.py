@@ -394,7 +394,7 @@ class EditVariationsView(BrowserView):
                     data['price'] = Decimal((0, digits, -2))
                 except ValueError:
                     if not price == "":
-                        data['price'] = Decimal(price)
+                        data['price'] = Decimal(price).quantize(Decimal('1.00'))
                     else:
                         data['price'] = Decimal("0.00")
 
