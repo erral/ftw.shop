@@ -5,7 +5,7 @@ This module contains the tool of ftw.shop
 import os
 from setuptools import setup, find_packages
 
-version = '2.0.7.dev0'
+version = '2.0.10.dev0'
 
 tests_require = [
     'Products.PloneTestCase',
@@ -13,7 +13,7 @@ tests_require = [
     'ftw.testbrowser',
     'ftw.testing',
     'plone.app.testing',
-    'pyquery<=0.6.1',
+    'pyquery',
     'zope.testing',
     ]
 
@@ -36,7 +36,7 @@ setup(name='ftw.shop',
         ],
 
       keywords='ftw shop plone',
-      author='4teamwork GmbH',
+      author='4teamwork AG',
       author_email='mailto:info@4teamwork.ch',
       url='https://github.com/4teamwork/ftw.shop',
       license='GPL2',
@@ -47,9 +47,10 @@ setup(name='ftw.shop',
       zip_safe=False,
 
       install_requires=[
+        'Plone',
         'collective.js.jqueryui',
         'collective.z3cform.wizard',
-        'ftw.upgrade',
+        'ftw.upgrade >= 1.14.5',
         'plone.api',
         'plone.app.registry',
         'plone.app.z3cform',

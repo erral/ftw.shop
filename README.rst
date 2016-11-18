@@ -57,8 +57,8 @@ control panel.
 Links
 =====
 
-- Github project repository: https://github.com/4teamwork/ftw.shop
-- Issue tracker: https://github.com/4teamwork/ftw.shop/issues
+- Github: https://github.com/4teamwork/ftw.shop
+- Issues: https://github.com/4teamwork/ftw.shop/issues
 - Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.shop
 
 
@@ -74,7 +74,3 @@ Copyright
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 ``ftw.shop`` is licensed under GNU General Public License, version 2.
-
-.. image:: https://cruel-carlota.pagodabox.com/47108caebd3b96f110cd90b5044b34d6
-   :alt: githalytics.com
-   :target: http://githalytics.com/4teamwork/ftw.shop
