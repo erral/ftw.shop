@@ -44,11 +44,34 @@ jQuery(function ($) {
         else {
             // Get the containing form's action URL
             url = $(this).parent().attr('action');
-            // Get skuCode and quantity from adjacent input fields
-            itemdata = {
-                skuCode: $(this).parents('form').find('input[name="skuCode"]').val(),
-                quantity: $(this).parents('form').find('input[name="quantity:int"]').val()
-            };
+            var var1choice = $(this).parent().find('input[name="varchoice1"]').val()
+            var var2choice = $(this).parent().find('input[name="varchoice2"]').val()
+            var itemdata;
+            if (var1choice == undefined) {
+                // We don't have variations - reference the item by its skuCode
+                // Get skuCode and quantity from adjacent input fields
+                itemdata = {
+                    skuCode: $(this).parents('form').find('input[name="skuCode"]').val(),
+                    quantity: $(this).parents('form').find('input[name="quantity:int"]').val()
+                };
+            }
+            else {
+                if (var2choice == undefined) {
+                    // We've got one variation
+                    itemdata = {
+                        var1choice: var1choice,
+                        quantity: $(this).parents('form').find('input[name="quantity:int"]').val()
+                    };
+                }
+                else {
+                    // We've got two variations
+                    itemdata = {
+                        var1choice: var1choice,
+                        var2choice: var2choice,
+                        quantity: $(this).parents('form').find('input[name="quantity:int"]').val()
+                    };
+                }
+            }
         }
 
         $.ajax({
