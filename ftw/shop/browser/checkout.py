@@ -372,7 +372,7 @@ class CheckoutWizard(wizard.Wizard):
 
     @button.buttonAndHandler(_(u'btn_finish', default='Finish'),
              name='finish',
-             condition=lambda form: form.allStepsFinished or form.onLastStep)
+             condition=lambda form: form.onLastStep)
     def handleFinish(self, action):
         data, errors = self.currentStep.extractData()
         if errors:
